@@ -22,7 +22,17 @@ public class CalculatorController {
      * Create a controller to multiply two numbers
      * Request is: /multiply-two-numbers
      * @author Kedi
+     * 
      */
+      @PostMapping("/multiply-two-numbers")
+    public String multiply(@RequestBody AddTwoNumbersReqDto dto) {
+        System.out.println("Message received!");
+        System.out.println("Parameter 1 is " + dto.getNumber1());
+        System.out.println("Parameter 2 is " + dto.getNumber2());
+        double result = dto.getNumber1() * dto.getNumber2();
+         System.out.println("The result is " + result);
+        return "The result of " + dto.getNumber1() + " + " + dto.getNumber2() + " is " + result;
+    }
     
     /**
      * Create a controller to subtract two numbers
