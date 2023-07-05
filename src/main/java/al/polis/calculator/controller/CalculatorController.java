@@ -29,4 +29,15 @@ public class CalculatorController {
      * Request is: /subtract-n1-from-n2
      * @author Henrik
      */
+    @PostMapping("/subtract-n1-from-n2")
+    public String subtract(@RequestBody AddTwoNumbersReqDto dto) {
+        System.out.println("Message received!");
+        System.out.println("Parameter 1 is " + dto.getNumber1());
+        System.out.println("Parameter 2 is " + dto.getNumber2());
+        double result = dto.getNumber1() - dto.getNumber2();
+        System.out.println("The result is " + result);
+        return "The result of " + dto.getNumber1() + " + " + dto.getNumber2() + " is " + result;
+    }
+     
+    
 }
