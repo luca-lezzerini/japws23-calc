@@ -17,4 +17,16 @@ public class CalculatorController {
         System.out.println("The result is " + result);
         return "The result of " + dto.getNumber1() + " + " + dto.getNumber2() + " is " + result;
     }
+    
+    /**
+     * Create a controller to multiply two numbers
+     * Request is: /multiply-two-numbers
+     * @author Kedi
+     */
+    
+    /**
+     * Create a controller to subtract two numbers
+     * Request is: /subtract-n1-from-n2
+     * @author Henrik
+     */
 }
