@@ -48,6 +48,19 @@ public class CalculatorController {
         System.out.println("The result is " + result);
         return "The result of " + dto.getNumber1() + " + " + dto.getNumber2() + " is " + result;
     }
+    
+    /**
+     * Create a controller to divide n1 by n2
+     * Request is: /divide-n1-by-n2
+     * @author Kedi
+     * 
+     */
      
+    /**
+     * Create a controller to calculate the remainder n1 % n2
+     * Request is: /remainder-n1-by-n2
+     * @author Henrik
+     * 
+     */
     
 }
