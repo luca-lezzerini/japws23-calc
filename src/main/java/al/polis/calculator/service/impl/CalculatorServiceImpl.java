@@ -9,6 +9,7 @@ public class CalculatorServiceImpl implements CalculatorService {
     @Override
     public double sum(double a, double b) {
         return a + b;
+
     }
 
     @Override
@@ -19,5 +20,12 @@ public class CalculatorServiceImpl implements CalculatorService {
     @Override
     public double remainder(double number1, double number2) {
         return number1 % number2;
+    public double multiply(double number1, double number2) {
+        return number1 * number2;
+    }
+
+    @Override
+    public double divide(double number1, double number2) {
+        return number1 / number2;
     }
 }

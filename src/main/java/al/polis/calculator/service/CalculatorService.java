@@ -7,4 +7,7 @@ public interface CalculatorService {
     double subtract(double number1, double number2);
 
     double remainder(double number1, double number2);
+    double multiply(double number1, double number2);
+
+    double divide (double number1, double number2);
 }

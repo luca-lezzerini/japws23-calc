@@ -38,7 +38,7 @@ public class CalculatorController {
         System.out.println("Message received!");
         System.out.println("Parameter 1 is " + dto.getNumber1());
         System.out.println("Parameter 2 is " + dto.getNumber2());
-        double result = dto.getNumber1() * dto.getNumber2();
+        double result = calculatorService.multiply(dto.getNumber1(), dto.getNumber2());
         System.out.println("The result is " + result);
         return "The result of " + dto.getNumber1() + " + " + dto.getNumber2() + " is " + result;
     }
@@ -72,9 +72,9 @@ public class CalculatorController {
         System.out.println("Message received!");
         System.out.println("Parameter 1 is " + dto.getNumber1());
         System.out.println("Parameter 2 is " + dto.getNumber2());
-        double result = dto.getNumber1() / dto.getNumber2();
+        double result = calculatorService.divide(dto.getNumber1(), dto.getNumber2());
         System.out.println("The result is " + result);
-        return "The result of " + dto.getNumber1() + " + " + dto.getNumber2() + " is " + result;
+        return "The result of " + dto.getNumber1() + " / " + dto.getNumber2() + " is " + result;
 
     }
 
