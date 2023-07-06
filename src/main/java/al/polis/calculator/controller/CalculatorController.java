@@ -78,5 +78,15 @@ public class CalculatorController {
      * @author Henrik
      * 
      */
-    
+    @PostMapping("/remainder-n1-by-n2")
+    public String remainder(@RequestBody AddTwoNumbersReqDto requestDto) {
+        System.out.println("Message received!");
+        System.out.println("Parameter 1 is " + requestDto.getFirstNumber());
+        System.out.println("Parameter 2 is " + requestDto.getSecondNumber());
+
+        double result = requestDto.getFirstNumber() % requestDto.getSecondNumber();
+        System.out.println("The result is " + result);
+
+        return "The result of " + requestDto.getFirstNumber() + " % " + requestDto.getSecondNumber() + " is " + result;
+    }
 }
