@@ -79,14 +79,19 @@ public class CalculatorController {
      * 
      */
     @PostMapping("/remainder-n1-by-n2")
-    public String remainder(@RequestBody AddTwoNumbersReqDto requestDto) {
-        System.out.println("Message received!");
-        System.out.println("Parameter 1 is " + requestDto.getNumber1());
-        System.out.println("Parameter 2 is " + requestDto.getNumber2());
+public String remainder(@RequestBody AddTwoNumbersReqDto requestDto) {
+    System.out.println("Message received!");
+    System.out.println("Parameter 1 is " + requestDto.getNumber1());
+    System.out.println("Parameter 2 is " + requestDto.getNumber2());
 
-        double result = requestDto.getNumber1()% requestDto.getNumber2();
-        System.out.println("The result is " + result);
-
-        return "The result of " + requestDto.getNumber1()+ " % " + requestDto.getNumber2()+ " is " + result;
+    if (requestDto.getNumber2() == 0) {
+        return "Error: Cannot divide by zero";
     }
+
+    double result = requestDto.getNumber1() % requestDto.getNumber2();
+    System.out.println("The result is " + result);
+
+    return "The result of " + requestDto.getNumber1() + " % " + requestDto.getNumber2() + " is " + result;
+}
+
 }
