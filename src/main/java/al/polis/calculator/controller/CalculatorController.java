@@ -1,12 +1,10 @@
 package al.polis.calculator.controller;
 
 import al.polis.calculator.dto.AddTwoNumbersReqDto;
-<<<<<<< Updated upstream
+import al.polis.calculator.dto.RemainderOfTwoNumbersDto;
 import al.polis.calculator.service.CalculatorService;
 import org.springframework.beans.factory.annotation.Autowired;
-=======
-import al.polis.calculator.dto.RemainderOfTwoNumbersDto;
->>>>>>> Stashed changes
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -90,17 +88,8 @@ public class CalculatorController {
      *
      */
     @PostMapping("/remainder-n1-by-n2")
-<<<<<<< Updated upstream
-    public String remainder(@RequestBody AddTwoNumbersReqDto requestDto) {
+    public String remainder(@RequestBody RemainderOfTwoNumbersDto requestDto) {
         System.out.println("Message received!");
-        System.out.println("Parameter 1 is " + requestDto.getNumber1());
-        System.out.println("Parameter 2 is " + requestDto.getNumber2());
-=======
-public String remainder(@RequestBody RemainderOfTwoNumbersDto requestDto) {
-    System.out.println("Message received!");
-    System.out.println("Parameter 1 is " + requestDto.getNumber1());
-    System.out.println("Parameter 2 is " + requestDto.getNumber2());
->>>>>>> Stashed changes
 
         if (requestDto.getNumber2() == 0) {
             return "Error: Cannot divide by zero";
