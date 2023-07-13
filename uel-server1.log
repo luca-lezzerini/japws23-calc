@@ -1,0 +1,148 @@
+2023-07-13T14:33:43.804+02:00 ERROR 13184 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to resolve name [it.unietlibera1.config.UelPhysicalNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+2023-07-13T14:33:43.811+02:00  WARN 13184 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to resolve name [it.unietlibera1.config.UelPhysicalNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+2023-07-13T14:33:43.868+02:00 ERROR 13184 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to resolve name [it.unietlibera1.config.UelPhysicalNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-6.0.10.jar:6.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931) ~[spring-context-6.0.10.jar:6.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.10.jar:6.0.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.1.jar:3.1.1]
+	at al.polis.calculator.CalculatorApplication.main(CalculatorApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.boot.registry.selector.spi.StrategySelectionException: Unable to resolve name [it.unietlibera1.config.UelPhysicalNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:154) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:236) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveDefaultableStrategy(StrategySelectorImpl.java:180) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveDefaultableStrategy(StrategySelectorImpl.java:167) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl.<init>(MetadataBuilderImpl.java:744) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.<init>(MetadataBuilderImpl.java:140) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.MetadataSources.getMetadataBuilder(MetadataSources.java:163) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.<init>(EntityManagerFactoryBuilderImpl.java:269) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.<init>(EntityManagerFactoryBuilderImpl.java:190) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:63) ~[spring-orm-6.0.10.jar:6.0.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.10.jar:6.0.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.10.jar:6.0.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.10.jar:6.0.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.10.jar:6.0.10]
+	... 16 common frames omitted
+Caused by: org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [it.unietlibera1.config.UelPhysicalNamingStrategy]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:123) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:150) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	... 31 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : it.unietlibera1.config.UelPhysicalNamingStrategy
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:215) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:587) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:120) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	... 32 common frames omitted
+Caused by: java.lang.Throwable: null
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:208) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	... 37 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: it.unietlibera1.config.UelPhysicalNamingStrategy
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:205) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+		... 37 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: it.unietlibera1.config.UelPhysicalNamingStrategy
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:205) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+		... 37 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: it.unietlibera1.config.UelPhysicalNamingStrategy
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:205) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+		... 37 common frames omitted
+
+2023-07-13T14:34:19.988+02:00 DEBUG 15028 --- [main] org.hibernate.SQL                        : 
+    create table calculator_row_seq (
+        next_val bigint
+    ) engine=InnoDB
+2023-07-13T14:34:20.027+02:00 DEBUG 15028 --- [main] org.hibernate.SQL                        : 
+    insert into calculator_row_seq values ( 1 )
+2023-07-13T14:34:20.041+02:00 DEBUG 15028 --- [main] org.hibernate.SQL                        : 
+    create table calculator_row (
+        id bigint not null,
+        first_number float(53),
+        operator varchar(255),
+        result float(53),
+        second_number float(53),
+        primary key (id)
+    ) engine=InnoDB
+2023-07-13T14:34:20.124+02:00  WARN 15028 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T14:40:11.107+02:00 DEBUG 13064 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T14:40:11.145+02:00 DEBUG 13064 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T14:40:11.163+02:00 DEBUG 13064 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T14:40:12.471+02:00  WARN 13064 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T14:42:33.797+02:00 DEBUG 13064 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        calculator_row_seq for update
+2023-07-13T14:42:33.814+02:00 DEBUG 13064 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    update
+        calculator_row_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-13T14:42:33.893+02:00 DEBUG 13064 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.CalculatorRow */insert 
+    into
+        calculator_row (first_number,operator,result,second_number,id) 
+    values
+        (?,?,?,?,?)
+2023-07-13T14:44:21.428+02:00 DEBUG 12872 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T14:44:21.448+02:00 DEBUG 12872 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T14:44:21.457+02:00 DEBUG 12872 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T14:44:22.043+02:00  WARN 12872 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T14:45:06.458+02:00 DEBUG 12872 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        calculator_row_seq for update
+2023-07-13T14:45:06.477+02:00 DEBUG 12872 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    update
+        calculator_row_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-13T14:45:06.579+02:00 DEBUG 12872 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.CalculatorRow */insert 
+    into
+        calculator_row (first_number,operator,result,second_number,id) 
+    values
+        (?,?,?,?,?)
