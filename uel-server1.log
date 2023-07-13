@@ -590,3 +590,32 @@ java.lang.UnsupportedOperationException: Not supported yet.
         calculator_row (first_number,operator,result,second_number,id) 
     values
         (?,?,?,?,?)
+2023-07-13T17:04:44.554+02:00 DEBUG 23208 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T17:04:44.578+02:00 DEBUG 23208 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T17:04:44.590+02:00 DEBUG 23208 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T17:04:45.159+02:00  WARN 23208 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T17:04:55.938+02:00 DEBUG 23208 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        calculator_row_seq for update
+2023-07-13T17:04:55.952+02:00 DEBUG 23208 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    update
+        calculator_row_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-13T17:04:56.005+02:00 DEBUG 23208 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.CalculatorRow */insert 
+    into
+        calculator_row (first_number,operator,result,second_number,id) 
+    values
+        (?,?,?,?,?)
