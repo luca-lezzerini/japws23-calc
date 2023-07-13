@@ -29,17 +29,40 @@ public class CalculatorServiceImpl implements CalculatorService {
 
     @Override
     public double subtract(double a, double b) {
-        return a - b;
+        CalculatorRow cr = new CalculatorRow();
+        cr.setFirstNumber(a);
+        cr.setSecondNumber(b);
+        cr.setOperator("-");
+        double result = a - b;
+        cr.setResult(result);
+        calculatorRowRepository.save(cr);
+        return result;
+        
+        
     }
 
     @Override
     public double remainder(double number1, double number2) {
-        return number1 % number2;
+        CalculatorRow cr = new CalculatorRow();
+        cr.setFirstNumber(1);
+        cr.setSecondNumber(number2);
+        cr.setOperator("%");
+        double result = number1 % number2;
+        cr.setResult(result);
+        calculatorRowRepository.save(cr);
+        return result;
     }
 
     @Override
     public double multiply(double number1, double number2) {
-        return number1 * number2;
+        CalculatorRow cr = new CalculatorRow();
+        cr.setFirstNumber(1);
+        cr.setSecondNumber(number2);
+        cr.setOperator("*");
+        double result = number1*number2;
+        cr.setResult(result);
+        calculatorRowRepository.save(cr);
+        return result;
     }
 
     @Override

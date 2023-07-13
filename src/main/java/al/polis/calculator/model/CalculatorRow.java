@@ -21,5 +21,6 @@ public class CalculatorRow {
     private double result;
     @Column
     private String operator;
+
     
 }
