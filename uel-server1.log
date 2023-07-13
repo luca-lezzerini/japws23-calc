@@ -146,3 +146,30 @@ Caused by: java.lang.Throwable: null
         calculator_row (first_number,operator,result,second_number,id) 
     values
         (?,?,?,?,?)
+2023-07-13T14:52:20.922+02:00 DEBUG 18860 --- [main] org.hibernate.SQL                        : 
+    create table calculator_row_seq (
+        next_val bigint
+    ) engine=InnoDB
+2023-07-13T14:52:20.962+02:00 DEBUG 18860 --- [main] org.hibernate.SQL                        : 
+    insert into calculator_row_seq values ( 1 )
+2023-07-13T14:52:20.969+02:00 DEBUG 18860 --- [main] org.hibernate.SQL                        : 
+    create table calculator_row (
+        id bigint not null,
+        first_number float(53),
+        operator varchar(255),
+        result float(53),
+        second_number float(53),
+        primary key (id)
+    ) engine=InnoDB
+2023-07-13T14:52:21.872+02:00  WARN 18860 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T14:53:42.199+02:00 DEBUG 10980 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T14:53:42.214+02:00 DEBUG 10980 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T14:53:42.228+02:00 DEBUG 10980 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T14:53:42.817+02:00  WARN 10980 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T15:21:52.328+02:00  WARN 10980 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]

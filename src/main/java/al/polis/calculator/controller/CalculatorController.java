@@ -2,6 +2,7 @@ package al.polis.calculator.controller;
 
 import al.polis.calculator.dto.AddTwoNumbersReqDto;
 import al.polis.calculator.dto.RemainderOfTwoNumbersDto;
+import al.polis.calculator.model.CalculatorRow;
 import al.polis.calculator.service.CalculatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,15 +16,19 @@ public class CalculatorController {
     @Autowired
     private CalculatorService calculatorService;
 
-    @PostMapping("/add-two-numbers")
+@PostMapping("/add-two-numbers")
     public String add(@RequestBody AddTwoNumbersReqDto dto) {
-        System.out.println("Message received!");
-        System.out.println("Parameter 1 is " + dto.getNumber1());
-        System.out.println("Parameter 2 is " + dto.getNumber2());
-//        double result = dto.getNumber1() + dto.getNumber2();
-        double result = calculatorService.sum(dto.getNumber1(), dto.getNumber2());
-        System.out.println("The result is " + result);
-        return "The result of " + dto.getNumber1() + " + " + dto.getNumber2() + " is " + result;
+        double number1 = dto.getNumber1();
+        double number2 = dto.getNumber2();
+        double result = number1 + number2;
+
+        CalculatorRow cr = new CalculatorRow();
+        cr.setFirstNumber(number1);
+        cr.setSecondNumber(number2);
+        cr.setResult(result);
+        calculatorRowRepository.save(cr);
+
+        return "The result of " + number1 + " + " + number2 + " is " + result;
     }
 
     /**
@@ -36,14 +41,20 @@ public class CalculatorController {
      *
      */
     @PostMapping("/multiply-two-numbers")
-    public String multiply(@RequestBody AddTwoNumbersReqDto dto) {
-        System.out.println("Message received!");
-        System.out.println("Parameter 1 is " + dto.getNumber1());
-        System.out.println("Parameter 2 is " + dto.getNumber2());
-        double result = calculatorService.multiply(dto.getNumber1(), dto.getNumber2());
-        System.out.println("The result is " + result);
-        return "The result of " + dto.getNumber1() + " + " + dto.getNumber2() + " is " + result;
+    public double multiply(@RequestBody AddTwoNumbersReqDto dto) {
+        double number1 = dto.getNumber1();
+        double number2 = dto.getNumber2();
+        double result = number1 * number2;
+
+        CalculatorRow cr = new CalculatorRow();
+        cr.setNumber1(number1);
+        cr.setNumber2(number2);
+        cr.setResult(result);
+        calculatorRowRepository.save(cr);
+
+        return result;
     }
+}
 
     /**
      * Create a controller to subtract two numbers Request is:
@@ -53,15 +64,21 @@ public class CalculatorController {
      * @param dto
      * @return
      */
-    @PostMapping("/subtract-n1-from-n2")
-    public String subtract(@RequestBody AddTwoNumbersReqDto dto) {
-        System.out.println("Message received!");
-        System.out.println("Parameter 1 is " + dto.getNumber1());
-        System.out.println("Parameter 2 is " + dto.getNumber2());
-        double result = calculatorService.subtract(dto.getNumber1(), dto.getNumber2());
-        System.out.println("The result is " + result);
-        return "The result of " + dto.getNumber1() + " + " + dto.getNumber2() + " is " + result;
-    }
+    
+  @PostMapping("/subtract-n1-from-n2")
+public double subtract(@RequestBody SubtractTwoNumbersReqDto dto) {
+    double number1 = dto.getNumber1();
+    double number2 = dto.getNumber2();
+    double result = number1 - number2;
+
+    AddTwoNumbersReqDto cr = new AddTwoNumbersReqDto();
+    cr.setNumber1(number1);
+    cr.setNumber2(number2);
+    cr.setResult(result);
+     
+    return result;
+}
+
 
     /**
      * Create a controller to divide n1 by n2 Request is: /divide-n1-by-n2
@@ -69,16 +86,28 @@ public class CalculatorController {
      * @author Kedi
      *
      */
-    @PostMapping("/divide-n1-by-n2")
-    public String divide(@RequestBody AddTwoNumbersReqDto dto) {
-        System.out.println("Message received!");
-        System.out.println("Parameter 1 is " + dto.getNumber1());
-        System.out.println("Parameter 2 is " + dto.getNumber2());
-        double result = calculatorService.divide(dto.getNumber1(), dto.getNumber2());
-        System.out.println("The result is " + result);
-        return "The result of " + dto.getNumber1() + " / " + dto.getNumber2() + " is " + result;
+   @PostMapping("/divide-n1-by-n2")
+public double divide(@RequestBody DivideNumbersReqDto dto) {
+    double number1 = dto.getNumber1();
+    double number2 = dto.getNumber2();
 
+    if (number2 == 0) {
+        throw new IllegalArgumentException("Cannot divide by zero");
     }
+
+    double result = number1 / number2;
+
+    Numbers numbers = new Numbers();
+    numbers.setNumber1(number1);
+    numbers.setNumber2(number2);
+    numbersRepository.save(numbers);
+
+    return result;
+}
+        
+
+
+
 
     /**
      * Create a controller to calculate the remainder n1 % n2 Request is:
@@ -87,17 +116,23 @@ public class CalculatorController {
      * @author Henrik
      *
      */
-    @PostMapping("/remainder-n1-by-n2")
-    public String remainder(@RequestBody RemainderOfTwoNumbersDto requestDto) {
-        System.out.println("Message received!");
-
-        if (requestDto.getNumber2() == 0) {
-            return "Error: Cannot divide by zero";
-        }
-
-        double result = calculatorService.remainder(requestDto.getNumber1(), requestDto.getNumber2());
-        System.out.println("The result is " + result);
-
-        return "The result of " + requestDto.getNumber1() + " % " + requestDto.getNumber2() + " is " + result;
-    }
+    @PostMapping("/divide-n1-by-n2")
+    public double divide(@RequestBody DivideNumbersReqDto dto) {
+        double number1 = dto.getNumber1();
+        double number2 = dto.getNumber2();
+        
+        if (number2 == 0) {
+            throw new IllegalArgumentException("Cannot divide by zero");
 }
+
+        double result = number1 / number2;
+
+        CalculatorRow cr = new CalculatorRow();
+        cr.setNumber1(number1);
+        cr.setNumber2(number2);
+        cr.setResult(result);
+        calculatorRowRepository.save(cr);
+
+        return result;
+    }
+
