@@ -1,10 +1,621 @@
-2023-07-15T11:42:53.844+02:00 DEBUG 12532 --- [main] org.hibernate.SQL                        : 
+2023-07-13T14:33:43.804+02:00 ERROR 13184 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to resolve name [it.unietlibera1.config.UelPhysicalNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+2023-07-13T14:33:43.811+02:00  WARN 13184 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to resolve name [it.unietlibera1.config.UelPhysicalNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+2023-07-13T14:33:43.868+02:00 ERROR 13184 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to resolve name [it.unietlibera1.config.UelPhysicalNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-6.0.10.jar:6.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931) ~[spring-context-6.0.10.jar:6.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.10.jar:6.0.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.1.jar:3.1.1]
+	at al.polis.calculator.CalculatorApplication.main(CalculatorApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.boot.registry.selector.spi.StrategySelectionException: Unable to resolve name [it.unietlibera1.config.UelPhysicalNamingStrategy] as strategy [org.hibernate.boot.model.naming.PhysicalNamingStrategy]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:154) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveStrategy(StrategySelectorImpl.java:236) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveDefaultableStrategy(StrategySelectorImpl.java:180) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.resolveDefaultableStrategy(StrategySelectorImpl.java:167) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl.<init>(MetadataBuilderImpl.java:744) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.<init>(MetadataBuilderImpl.java:140) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.MetadataSources.getMetadataBuilder(MetadataSources.java:163) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.<init>(EntityManagerFactoryBuilderImpl.java:269) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.<init>(EntityManagerFactoryBuilderImpl.java:190) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:63) ~[spring-orm-6.0.10.jar:6.0.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.10.jar:6.0.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.10.jar:6.0.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.10.jar:6.0.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.10.jar:6.0.10]
+	... 16 common frames omitted
+Caused by: org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [it.unietlibera1.config.UelPhysicalNamingStrategy]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:123) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.registry.selector.internal.StrategySelectorImpl.selectStrategyImplementor(StrategySelectorImpl.java:150) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	... 31 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : it.unietlibera1.config.UelPhysicalNamingStrategy
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:215) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:587) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:120) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	... 32 common frames omitted
+Caused by: java.lang.Throwable: null
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:208) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	... 37 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: it.unietlibera1.config.UelPhysicalNamingStrategy
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:205) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+		... 37 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: it.unietlibera1.config.UelPhysicalNamingStrategy
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:205) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+		... 37 common frames omitted
+	Suppressed: java.lang.ClassNotFoundException: it.unietlibera1.config.UelPhysicalNamingStrategy
+		at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+		at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+		at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+		at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:205) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+		... 37 common frames omitted
+
+2023-07-13T14:34:19.988+02:00 DEBUG 15028 --- [main] org.hibernate.SQL                        : 
+    create table calculator_row_seq (
+        next_val bigint
+    ) engine=InnoDB
+2023-07-13T14:34:20.027+02:00 DEBUG 15028 --- [main] org.hibernate.SQL                        : 
+    insert into calculator_row_seq values ( 1 )
+2023-07-13T14:34:20.041+02:00 DEBUG 15028 --- [main] org.hibernate.SQL                        : 
+    create table calculator_row (
+        id bigint not null,
+        first_number float(53),
+        operator varchar(255),
+        result float(53),
+        second_number float(53),
+        primary key (id)
+    ) engine=InnoDB
+2023-07-13T14:34:20.124+02:00  WARN 15028 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T14:40:11.107+02:00 DEBUG 13064 --- [main] org.hibernate.SQL                        : 
     alter table calculator_row 
        modify column first_number  float(53)
-2023-07-15T11:42:53.897+02:00 DEBUG 12532 --- [main] org.hibernate.SQL                        : 
+2023-07-13T14:40:11.145+02:00 DEBUG 13064 --- [main] org.hibernate.SQL                        : 
     alter table calculator_row 
        modify column result  float(53)
-2023-07-15T11:42:53.909+02:00 DEBUG 12532 --- [main] org.hibernate.SQL                        : 
+2023-07-13T14:40:11.163+02:00 DEBUG 13064 --- [main] org.hibernate.SQL                        : 
     alter table calculator_row 
        modify column second_number  float(53)
-2023-07-15T11:42:54.458+02:00  WARN 12532 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T14:40:12.471+02:00  WARN 13064 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T14:42:33.797+02:00 DEBUG 13064 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        calculator_row_seq for update
+2023-07-13T14:42:33.814+02:00 DEBUG 13064 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    update
+        calculator_row_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-13T14:42:33.893+02:00 DEBUG 13064 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.CalculatorRow */insert 
+    into
+        calculator_row (first_number,operator,result,second_number,id) 
+    values
+        (?,?,?,?,?)
+2023-07-13T14:44:21.428+02:00 DEBUG 12872 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T14:44:21.448+02:00 DEBUG 12872 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T14:44:21.457+02:00 DEBUG 12872 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T14:44:22.043+02:00  WARN 12872 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T14:45:06.458+02:00 DEBUG 12872 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        calculator_row_seq for update
+2023-07-13T14:45:06.477+02:00 DEBUG 12872 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    update
+        calculator_row_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-13T14:45:06.579+02:00 DEBUG 12872 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.CalculatorRow */insert 
+    into
+        calculator_row (first_number,operator,result,second_number,id) 
+    values
+        (?,?,?,?,?)
+2023-07-13T14:52:20.922+02:00 DEBUG 18860 --- [main] org.hibernate.SQL                        : 
+    create table calculator_row_seq (
+        next_val bigint
+    ) engine=InnoDB
+2023-07-13T14:52:20.962+02:00 DEBUG 18860 --- [main] org.hibernate.SQL                        : 
+    insert into calculator_row_seq values ( 1 )
+2023-07-13T14:52:20.969+02:00 DEBUG 18860 --- [main] org.hibernate.SQL                        : 
+    create table calculator_row (
+        id bigint not null,
+        first_number float(53),
+        operator varchar(255),
+        result float(53),
+        second_number float(53),
+        primary key (id)
+    ) engine=InnoDB
+2023-07-13T14:52:21.872+02:00  WARN 18860 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T14:53:42.199+02:00 DEBUG 10980 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T14:53:42.214+02:00 DEBUG 10980 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T14:53:42.228+02:00 DEBUG 10980 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T14:53:42.817+02:00  WARN 10980 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T15:21:52.328+02:00  WARN 10980 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2023-07-13T16:24:08.537+02:00 DEBUG 12276 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T16:24:08.559+02:00 DEBUG 12276 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T16:24:08.570+02:00 DEBUG 12276 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T16:24:09.033+02:00  WARN 12276 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T16:24:09.346+02:00  WARN 12276 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'calculatorController' method 
+al.polis.calculator.controller.CalculatorController#divide(AddTwoNumbersReqDto)
+to {POST [/divide-n1-by-n2]}: There is already 'calculatorController' bean method
+al.polis.calculator.controller.CalculatorController#remainder(AddTwoNumbersReqDto) mapped.
+2023-07-13T16:24:09.430+02:00 ERROR 12276 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'calculatorController' method 
+al.polis.calculator.controller.CalculatorController#divide(AddTwoNumbersReqDto)
+to {POST [/divide-n1-by-n2]}: There is already 'calculatorController' bean method
+al.polis.calculator.controller.CalculatorController#remainder(AddTwoNumbersReqDto) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941) ~[spring-context-6.0.10.jar:6.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.10.jar:6.0.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.1.jar:3.1.1]
+	at al.polis.calculator.CalculatorApplication.main(CalculatorApplication.java:10) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'calculatorController' method 
+al.polis.calculator.controller.CalculatorController#divide(AddTwoNumbersReqDto)
+to {POST [/divide-n1-by-n2]}: There is already 'calculatorController' bean method
+al.polis.calculator.controller.CalculatorController#remainder(AddTwoNumbersReqDto) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:667) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:633) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:441) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:225) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.10.jar:6.0.10]
+	... 16 common frames omitted
+
+2023-07-13T16:25:23.209+02:00 DEBUG 17696 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T16:25:23.227+02:00 DEBUG 17696 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T16:25:23.234+02:00 DEBUG 17696 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T16:25:23.792+02:00  WARN 17696 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T16:25:24.224+02:00  WARN 17696 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'calculatorController' method 
+al.polis.calculator.controller.CalculatorController#divide(AddTwoNumbersReqDto)
+to {POST [/divide-n1-by-n2]}: There is already 'calculatorController' bean method
+al.polis.calculator.controller.CalculatorController#remainder(AddTwoNumbersReqDto) mapped.
+2023-07-13T16:25:24.293+02:00 ERROR 17696 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'calculatorController' method 
+al.polis.calculator.controller.CalculatorController#divide(AddTwoNumbersReqDto)
+to {POST [/divide-n1-by-n2]}: There is already 'calculatorController' bean method
+al.polis.calculator.controller.CalculatorController#remainder(AddTwoNumbersReqDto) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941) ~[spring-context-6.0.10.jar:6.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.10.jar:6.0.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.1.jar:3.1.1]
+	at al.polis.calculator.CalculatorApplication.main(CalculatorApplication.java:10) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'calculatorController' method 
+al.polis.calculator.controller.CalculatorController#divide(AddTwoNumbersReqDto)
+to {POST [/divide-n1-by-n2]}: There is already 'calculatorController' bean method
+al.polis.calculator.controller.CalculatorController#remainder(AddTwoNumbersReqDto) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:667) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:633) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:441) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:225) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.10.jar:6.0.10]
+	... 16 common frames omitted
+
+2023-07-13T16:26:58.133+02:00 DEBUG 16024 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T16:26:58.152+02:00 DEBUG 16024 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T16:26:58.161+02:00 DEBUG 16024 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T16:26:58.666+02:00  WARN 16024 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T16:27:09.764+02:00  WARN 16024 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2023-07-13T16:27:24.083+02:00  WARN 16024 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2023-07-13T16:27:40.907+02:00  WARN 16024 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2023-07-13T16:28:58.776+02:00  WARN 16024 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2023-07-13T16:29:31.496+02:00  WARN 16024 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2023-07-13T16:29:39.488+02:00 ERROR 16024 --- [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.UnsupportedOperationException: Not supported yet.] with root cause
+
+java.lang.UnsupportedOperationException: Not supported yet.
+	at al.polis.calculator.model.CalculatorRow.setResult(CalculatorRow.java:34) ~[classes/:na]
+	at al.polis.calculator.controller.CalculatorController.add(CalculatorController.java:27) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-07-13T16:33:16.722+02:00 DEBUG 5400 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T16:33:16.737+02:00 DEBUG 5400 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T16:33:16.745+02:00 DEBUG 5400 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T16:33:17.326+02:00  WARN 5400 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T16:33:26.065+02:00 ERROR 5400 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.UnsupportedOperationException: Not supported yet.] with root cause
+
+java.lang.UnsupportedOperationException: Not supported yet.
+	at al.polis.calculator.controller.calculatorRowRepository.save(calculatorRowRepository.java:21) ~[classes/:na]
+	at al.polis.calculator.controller.CalculatorController.add(CalculatorController.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-07-13T16:34:44.006+02:00 DEBUG 15264 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T16:34:44.023+02:00 DEBUG 15264 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T16:34:44.033+02:00 DEBUG 15264 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T16:34:44.710+02:00  WARN 15264 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T16:35:05.108+02:00 DEBUG 21976 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T16:35:05.120+02:00 DEBUG 21976 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T16:35:05.127+02:00 DEBUG 21976 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T16:35:05.600+02:00  WARN 21976 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T16:35:14.272+02:00 ERROR 21976 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.UnsupportedOperationException: Not supported yet.] with root cause
+
+java.lang.UnsupportedOperationException: Not supported yet.
+	at al.polis.calculator.controller.calculatorRowRepository.save(calculatorRowRepository.java:21) ~[classes/:na]
+	at al.polis.calculator.controller.CalculatorController.add(CalculatorController.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-07-13T16:53:19.897+02:00 DEBUG 9612 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T16:53:19.912+02:00 DEBUG 9612 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T16:53:19.919+02:00 DEBUG 9612 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T16:53:20.360+02:00  WARN 9612 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T16:53:47.305+02:00 DEBUG 9612 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        calculator_row_seq for update
+2023-07-13T16:53:47.324+02:00 DEBUG 9612 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    update
+        calculator_row_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-13T16:53:47.406+02:00 DEBUG 9612 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.CalculatorRow */insert 
+    into
+        calculator_row (first_number,operator,result,second_number,id) 
+    values
+        (?,?,?,?,?)
+2023-07-13T16:58:49.514+02:00 DEBUG 22352 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T16:58:49.528+02:00 DEBUG 22352 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T16:58:49.537+02:00 DEBUG 22352 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T16:58:50.007+02:00  WARN 22352 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T16:59:06.029+02:00 DEBUG 22352 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        calculator_row_seq for update
+2023-07-13T16:59:06.040+02:00 DEBUG 22352 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    update
+        calculator_row_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-13T16:59:06.084+02:00 DEBUG 22352 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.CalculatorRow */insert 
+    into
+        calculator_row (first_number,operator,result,second_number,id) 
+    values
+        (?,?,?,?,?)
+2023-07-13T17:00:08.161+02:00 DEBUG 13168 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T17:00:08.177+02:00 DEBUG 13168 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T17:00:08.189+02:00 DEBUG 13168 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T17:00:08.953+02:00  WARN 13168 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T17:00:15.687+02:00 DEBUG 13168 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        calculator_row_seq for update
+2023-07-13T17:00:15.704+02:00 DEBUG 13168 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    update
+        calculator_row_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-13T17:00:15.773+02:00 DEBUG 13168 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.CalculatorRow */insert 
+    into
+        calculator_row (first_number,operator,result,second_number,id) 
+    values
+        (?,?,?,?,?)
+2023-07-13T17:04:44.554+02:00 DEBUG 23208 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-13T17:04:44.578+02:00 DEBUG 23208 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-13T17:04:44.590+02:00 DEBUG 23208 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-13T17:04:45.159+02:00  WARN 23208 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-13T17:04:55.938+02:00 DEBUG 23208 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        calculator_row_seq for update
+2023-07-13T17:04:55.952+02:00 DEBUG 23208 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    update
+        calculator_row_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-13T17:04:56.005+02:00 DEBUG 23208 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.CalculatorRow */insert 
+    into
+        calculator_row (first_number,operator,result,second_number,id) 
+    values
+        (?,?,?,?,?)

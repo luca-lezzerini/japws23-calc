@@ -67,6 +67,14 @@ public class CalculatorServiceImpl implements CalculatorService {
 
     @Override
     public double divide(double number1, double number2) {
-        return number1 / number2;
+        CalculatorRow cr = new CalculatorRow();
+        cr.setFirstNumber(1);
+        cr.setSecondNumber(number2);
+        cr.setOperator("/");
+        double result = number1/number2;
+        cr.setResult(result);
+        calculatorRowRepository.save(cr);
+        return result;
+        
     }
 }
