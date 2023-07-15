@@ -121,4 +121,18 @@ public class CalculatorController {
         resp.setToken(token);
         return resp;
     }
+    
+    /*
+        New exercise for July, 17th 2023
+        Create a Customer entity with 3 fields: name:String, city:String, balance:Double 
+        Create a repository to find: 
+            all customers with the same name -> findByName
+            all customers with the same city -> findByName
+            
+        Create services and a controllers (methods) to:
+            return the list of all customers
+            return the list of all customers with a given name
+            return the list of all customers with a given city
+            return the list of all customers with a given name and city
+    */
 }
