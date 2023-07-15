@@ -50,4 +50,39 @@ public class SecurityServiceImpl implements SecurityService {
         return "";
     }
 
+    @Override
+    public String login3(String username, String password) {
+        if (username == null || password == null) {
+            return ""; // no username or password -> no token!
+        }
+
+        List<User> users = userRepository.findByUsername(username);
+        if (users == null || users.size() == 0) {
+            return "";
+        }
+        User found = users.get(0);
+        if (password.equalsIgnoreCase(found.getPassword())) {
+            long tknumber = rnd.nextLong();
+            String token = "Bearer " + Long.toHexString(tknumber);
+            return token;
+        }
+        return "";
+    }
+
+    @Override
+    public String login4(String username, String password) {
+        if (username == null || password == null) {
+            return ""; // no username or password -> no token!
+        }
+
+        User found = userRepository.findByUsernameAndPassword(username, password);
+        if (found != null) {
+            long tknumber = rnd.nextLong();
+            String token = "Bearer " + Long.toHexString(tknumber);
+            return token;
+        } else {
+            return "";
+        }
+    }
+
 }

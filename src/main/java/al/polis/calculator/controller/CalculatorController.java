@@ -116,7 +116,7 @@ public class CalculatorController {
     @PostMapping("/login")
     @ResponseBody
     public LoginRespDto login(@RequestBody LoginReqDto req) {
-        String token = securityService.login2(req.getUsername(), req.getPassword());
+        String token = securityService.login3(req.getUsername(), req.getPassword());
         LoginRespDto resp = new LoginRespDto();
         resp.setToken(token);
         return resp;
