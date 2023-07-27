@@ -36,3 +36,1449 @@ Action:
 
 Consider defining a bean of type 'al.polis.calculator.controller.CustomerService' in your configuration.
 
+2023-07-27T16:44:42.988+02:00 DEBUG 16468 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-27T16:44:43.024+02:00 DEBUG 16468 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-27T16:44:43.033+02:00 DEBUG 16468 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-27T16:44:43.044+02:00 DEBUG 16468 --- [main] org.hibernate.SQL                        : 
+    create table customer (
+        id bigint not null,
+        city varchar(255),
+        name varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2023-07-27T16:44:43.065+02:00 DEBUG 16468 --- [main] org.hibernate.SQL                        : 
+    create table customer_seq (
+        next_val bigint
+    ) engine=InnoDB
+2023-07-27T16:44:43.081+02:00 DEBUG 16468 --- [main] org.hibernate.SQL                        : 
+    insert into customer_seq values ( 1 )
+2023-07-27T16:44:44.081+02:00  WARN 16468 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T16:45:57.571+02:00 DEBUG 16468 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.city,
+        c1_0.name 
+    from
+        customer c1_0
+2023-07-27T16:47:04.512+02:00 DEBUG 16468 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.city,
+        c1_0.name 
+    from
+        customer c1_0
+2023-07-27T16:47:49.292+02:00 DEBUG 16468 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.city,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.name=?
+2023-07-27T16:48:33.362+02:00 DEBUG 16468 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.city,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.city=?
+2023-07-27T16:49:19.168+02:00 DEBUG 16468 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.city,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.name=? 
+        and c1_0.city=?
+2023-07-27T16:49:33.937+02:00 DEBUG 16468 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.city,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.name=? 
+        and c1_0.city=?
+2023-07-27T16:51:04.500+02:00 DEBUG 16468 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.city,
+        c1_0.name 
+    from
+        customer c1_0
+2023-07-27T16:51:19.042+02:00 DEBUG 16468 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.city,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.name=?
+2023-07-27T16:51:29.558+02:00 DEBUG 16468 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.city,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.city=?
+2023-07-27T16:51:37.791+02:00 DEBUG 16468 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.city,
+        c1_0.name 
+    from
+        customer c1_0 
+    where
+        c1_0.name=? 
+        and c1_0.city=?
+2023-07-27T17:24:00.488+02:00 DEBUG 16032 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-27T17:24:00.501+02:00 DEBUG 16032 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-27T17:24:00.508+02:00 DEBUG 16032 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-27T17:24:01.667+02:00  WARN 16032 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T17:25:14.160+02:00 DEBUG 5052 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-27T17:25:14.172+02:00 DEBUG 5052 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-27T17:25:14.179+02:00 DEBUG 5052 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-27T17:25:15.411+02:00  WARN 5052 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T17:25:29.885+02:00 DEBUG 5052 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* select
+        c 
+    from
+        Customer c 
+    where
+        c.name = :name */ select
+            c1_0.id,
+            c1_0.city,
+            c1_0.name 
+        from
+            customer c1_0 
+        where
+            c1_0.name=?
+2023-07-27T17:59:50.653+02:00 DEBUG 19788 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-27T17:59:50.665+02:00 DEBUG 19788 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-27T17:59:50.675+02:00 DEBUG 19788 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-27T17:59:50.690+02:00 DEBUG 19788 --- [main] org.hibernate.SQL                        : 
+    create table car (
+        id bigint not null,
+        model varchar(255),
+        plate varchar(255),
+        owner_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+2023-07-27T17:59:50.711+02:00 DEBUG 19788 --- [main] org.hibernate.SQL                        : 
+    create table car_seq (
+        next_val bigint
+    ) engine=InnoDB
+2023-07-27T17:59:50.730+02:00 DEBUG 19788 --- [main] org.hibernate.SQL                        : 
+    insert into car_seq values ( 1 )
+2023-07-27T17:59:50.736+02:00 DEBUG 19788 --- [main] org.hibernate.SQL                        : 
+    create table person (
+        id bigint not null,
+        first_name varchar(255),
+        last_name varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2023-07-27T17:59:50.758+02:00 DEBUG 19788 --- [main] org.hibernate.SQL                        : 
+    create table person_seq (
+        next_val bigint
+    ) engine=InnoDB
+2023-07-27T17:59:50.787+02:00 DEBUG 19788 --- [main] org.hibernate.SQL                        : 
+    insert into person_seq values ( 1 )
+2023-07-27T17:59:50.794+02:00 DEBUG 19788 --- [main] org.hibernate.SQL                        : 
+    alter table car 
+       add constraint FKgbiqmhhk4njnmkkerl1lvqppk 
+       foreign key (owner_id) 
+       references person (id)
+2023-07-27T17:59:52.374+02:00  WARN 19788 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T18:00:03.716+02:00 DEBUG 19788 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.model,
+        c1_0.owner_id,
+        c1_0.plate 
+    from
+        car c1_0
+2023-07-27T18:00:03.738+02:00 DEBUG 19788 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0
+2023-07-27T18:00:03.770+02:00 DEBUG 19788 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        person_seq for update
+2023-07-27T18:00:03.773+02:00 DEBUG 19788 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        person_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:00:03.829+02:00 DEBUG 19788 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Person */insert 
+    into
+        person (first_name,last_name,id) 
+    values
+        (?,?,?)
+2023-07-27T18:00:03.846+02:00 DEBUG 19788 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        car_seq for update
+2023-07-27T18:00:03.848+02:00 DEBUG 19788 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        car_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:00:03.856+02:00 DEBUG 19788 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:00:03.867+02:00 DEBUG 19788 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        car_seq for update
+2023-07-27T18:00:03.869+02:00 DEBUG 19788 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        car_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:00:03.876+02:00 DEBUG 19788 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:02:26.818+02:00 DEBUG 19720 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-27T18:02:26.835+02:00 DEBUG 19720 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-27T18:02:26.843+02:00 DEBUG 19720 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-27T18:02:28.107+02:00  WARN 19720 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T18:02:40.976+02:00 DEBUG 19720 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.model,
+        c1_0.owner_id,
+        c1_0.plate 
+    from
+        car c1_0
+2023-07-27T18:02:41.037+02:00 DEBUG 19720 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:02:41.044+02:00 DEBUG 19720 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:02:41.060+02:00 DEBUG 19720 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0
+2023-07-27T18:02:41.084+02:00 DEBUG 19720 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Person */delete 
+    from
+        person 
+    where
+        id=?
+2023-07-27T18:02:41.112+02:00 DEBUG 19720 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        person_seq for update
+2023-07-27T18:02:41.114+02:00 DEBUG 19720 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    update
+        person_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:02:41.129+02:00 DEBUG 19720 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Person */insert 
+    into
+        person (first_name,last_name,id) 
+    values
+        (?,?,?)
+2023-07-27T18:02:41.167+02:00 DEBUG 19720 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        car_seq for update
+2023-07-27T18:02:41.169+02:00 DEBUG 19720 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    update
+        car_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:02:41.180+02:00 DEBUG 19720 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:02:41.190+02:00 DEBUG 19720 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:02:41.211+02:00 DEBUG 19720 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:04:20.442+02:00 DEBUG 19752 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-27T18:04:20.456+02:00 DEBUG 19752 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-27T18:04:20.464+02:00 DEBUG 19752 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-27T18:04:22.140+02:00  WARN 19752 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T18:04:42.016+02:00 DEBUG 19752 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.model,
+        c1_0.owner_id,
+        c1_0.plate 
+    from
+        car c1_0
+2023-07-27T18:04:42.050+02:00 DEBUG 19752 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0 
+    where
+        p1_0.id=?
+2023-07-27T18:04:42.122+02:00 DEBUG 19752 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:04:42.126+02:00 DEBUG 19752 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:04:42.135+02:00 DEBUG 19752 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0
+2023-07-27T18:04:42.145+02:00 DEBUG 19752 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Person */delete 
+    from
+        person 
+    where
+        id=?
+2023-07-27T18:04:42.165+02:00 DEBUG 19752 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        person_seq for update
+2023-07-27T18:04:42.167+02:00 DEBUG 19752 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        person_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:04:42.177+02:00 DEBUG 19752 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Person */insert 
+    into
+        person (first_name,last_name,id) 
+    values
+        (?,?,?)
+2023-07-27T18:04:42.189+02:00 DEBUG 19752 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        car_seq for update
+2023-07-27T18:04:42.192+02:00 DEBUG 19752 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        car_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:04:42.199+02:00 DEBUG 19752 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:04:42.207+02:00 DEBUG 19752 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:04:42.234+02:00 DEBUG 19752 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:04:42.249+02:00 DEBUG 19752 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:06:36.630+02:00 DEBUG 13492 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-27T18:06:36.641+02:00 DEBUG 13492 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-27T18:06:36.648+02:00 DEBUG 13492 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-27T18:06:37.908+02:00  WARN 13492 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T18:06:46.730+02:00 DEBUG 13492 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.model,
+        c1_0.owner_id,
+        c1_0.plate 
+    from
+        car c1_0
+2023-07-27T18:06:46.766+02:00 DEBUG 13492 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0 
+    where
+        p1_0.id=?
+2023-07-27T18:06:46.846+02:00 DEBUG 13492 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:06:46.851+02:00 DEBUG 13492 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:06:46.864+02:00 DEBUG 13492 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0
+2023-07-27T18:06:46.873+02:00 DEBUG 13492 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Person */delete 
+    from
+        person 
+    where
+        id=?
+2023-07-27T18:06:46.896+02:00 DEBUG 13492 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        person_seq for update
+2023-07-27T18:06:46.898+02:00 DEBUG 13492 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        person_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:06:46.908+02:00 DEBUG 13492 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Person */insert 
+    into
+        person (first_name,last_name,id) 
+    values
+        (?,?,?)
+2023-07-27T18:06:46.919+02:00 DEBUG 13492 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        car_seq for update
+2023-07-27T18:06:46.921+02:00 DEBUG 13492 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        car_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:06:46.931+02:00 DEBUG 13492 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:06:46.940+02:00 DEBUG 13492 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:06:46.971+02:00 DEBUG 13492 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:06:46.984+02:00 DEBUG 13492 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:06:46.999+02:00 ERROR 13492 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "cars" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "cars" is null
+	at al.polis.calculator.service.impl.CustomerServiceImpl.testRelationships(CustomerServiceImpl.java:77) ~[classes/:na]
+	at al.polis.calculator.controller.CustomerController.relationships(CustomerController.java:50) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-07-27T18:11:49.019+02:00 DEBUG 20168 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-27T18:11:49.034+02:00 DEBUG 20168 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-27T18:11:49.040+02:00 DEBUG 20168 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-27T18:11:50.249+02:00  WARN 20168 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T18:12:01.384+02:00 DEBUG 20168 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.model,
+        c1_0.owner_id,
+        c1_0.plate 
+    from
+        car c1_0
+2023-07-27T18:12:01.411+02:00 DEBUG 20168 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0 
+    where
+        p1_0.id=?
+2023-07-27T18:12:01.483+02:00 DEBUG 20168 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:12:01.491+02:00 DEBUG 20168 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:12:01.506+02:00 DEBUG 20168 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0
+2023-07-27T18:12:01.515+02:00 DEBUG 20168 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Person */delete 
+    from
+        person 
+    where
+        id=?
+2023-07-27T18:12:01.534+02:00 DEBUG 20168 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        person_seq for update
+2023-07-27T18:12:01.538+02:00 DEBUG 20168 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        person_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:12:01.552+02:00 DEBUG 20168 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Person */insert 
+    into
+        person (first_name,last_name,id) 
+    values
+        (?,?,?)
+2023-07-27T18:12:01.563+02:00 DEBUG 20168 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        car_seq for update
+2023-07-27T18:12:01.565+02:00 DEBUG 20168 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        car_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:12:01.572+02:00 DEBUG 20168 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:12:01.578+02:00 DEBUG 20168 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:12:01.597+02:00 DEBUG 20168 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:12:01.607+02:00 DEBUG 20168 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:12:01.623+02:00 ERROR 20168 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "cars" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "cars" is null
+	at al.polis.calculator.service.impl.CustomerServiceImpl.testRelationships(CustomerServiceImpl.java:79) ~[classes/:na]
+	at al.polis.calculator.controller.CustomerController.relationships(CustomerController.java:50) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-07-27T18:13:17.402+02:00 DEBUG 2096 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-27T18:13:17.413+02:00 DEBUG 2096 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-27T18:13:17.420+02:00 DEBUG 2096 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-27T18:13:18.891+02:00  WARN 2096 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T18:13:29.043+02:00 DEBUG 2096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.model,
+        c1_0.owner_id,
+        c1_0.plate 
+    from
+        car c1_0
+2023-07-27T18:13:29.085+02:00 DEBUG 2096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0 
+    where
+        p1_0.id=?
+2023-07-27T18:13:29.196+02:00 DEBUG 2096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:13:29.204+02:00 DEBUG 2096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:13:29.221+02:00 DEBUG 2096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0
+2023-07-27T18:13:29.232+02:00 DEBUG 2096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Person */delete 
+    from
+        person 
+    where
+        id=?
+2023-07-27T18:13:29.256+02:00 DEBUG 2096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        person_seq for update
+2023-07-27T18:13:29.258+02:00 DEBUG 2096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        person_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:13:29.275+02:00 DEBUG 2096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Person */insert 
+    into
+        person (first_name,last_name,id) 
+    values
+        (?,?,?)
+2023-07-27T18:13:29.283+02:00 DEBUG 2096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        car_seq for update
+2023-07-27T18:13:29.286+02:00 DEBUG 2096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        car_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:13:29.290+02:00 DEBUG 2096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:13:29.298+02:00 DEBUG 2096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:13:29.315+02:00 DEBUG 2096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:13:29.331+02:00 DEBUG 2096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:15:48.361+02:00 DEBUG 12872 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-27T18:15:48.370+02:00 DEBUG 12872 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-27T18:15:48.377+02:00 DEBUG 12872 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-27T18:15:49.593+02:00  WARN 12872 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T18:16:00.627+02:00 DEBUG 12872 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.model,
+        c1_0.owner_id,
+        c1_0.plate 
+    from
+        car c1_0
+2023-07-27T18:16:00.644+02:00 DEBUG 12872 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0 
+    where
+        p1_0.id=?
+2023-07-27T18:16:00.710+02:00 DEBUG 12872 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:16:00.720+02:00 DEBUG 12872 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:16:00.731+02:00 DEBUG 12872 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0
+2023-07-27T18:16:00.740+02:00 DEBUG 12872 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Person */delete 
+    from
+        person 
+    where
+        id=?
+2023-07-27T18:16:00.759+02:00 DEBUG 12872 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        person_seq for update
+2023-07-27T18:16:00.762+02:00 DEBUG 12872 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        person_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:16:00.775+02:00 DEBUG 12872 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Person */insert 
+    into
+        person (first_name,last_name,id) 
+    values
+        (?,?,?)
+2023-07-27T18:16:00.785+02:00 DEBUG 12872 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        car_seq for update
+2023-07-27T18:16:00.787+02:00 DEBUG 12872 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        car_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:16:00.793+02:00 DEBUG 12872 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:16:00.798+02:00 DEBUG 12872 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:16:00.818+02:00 DEBUG 12872 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:16:00.826+02:00 DEBUG 12872 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:16:00.837+02:00 ERROR 12872 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because "cs" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because "cs" is null
+	at al.polis.calculator.service.impl.CustomerServiceImpl.testRelationships(CustomerServiceImpl.java:77) ~[classes/:na]
+	at al.polis.calculator.controller.CustomerController.relationships(CustomerController.java:50) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.10.jar:6.0.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.10.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.10.jar:6.0.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.10.jar:10.1.10]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-07-27T18:17:11.592+02:00 DEBUG 3508 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-27T18:17:11.610+02:00 DEBUG 3508 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-27T18:17:11.619+02:00 DEBUG 3508 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-27T18:17:13.036+02:00  WARN 3508 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T18:17:21.171+02:00 DEBUG 3508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.model,
+        c1_0.owner_id,
+        c1_0.plate 
+    from
+        car c1_0
+2023-07-27T18:17:21.196+02:00 DEBUG 3508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0 
+    where
+        p1_0.id=?
+2023-07-27T18:17:21.266+02:00 DEBUG 3508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:17:21.272+02:00 DEBUG 3508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:17:21.283+02:00 DEBUG 3508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0
+2023-07-27T18:17:21.293+02:00 DEBUG 3508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Person */delete 
+    from
+        person 
+    where
+        id=?
+2023-07-27T18:17:21.314+02:00 DEBUG 3508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        person_seq for update
+2023-07-27T18:17:21.316+02:00 DEBUG 3508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    update
+        person_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:17:21.330+02:00 DEBUG 3508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Person */insert 
+    into
+        person (first_name,last_name,id) 
+    values
+        (?,?,?)
+2023-07-27T18:17:21.345+02:00 DEBUG 3508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        car_seq for update
+2023-07-27T18:17:21.348+02:00 DEBUG 3508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    update
+        car_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:17:21.353+02:00 DEBUG 3508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:17:21.360+02:00 DEBUG 3508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:17:21.385+02:00 DEBUG 3508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:17:21.398+02:00 DEBUG 3508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:17:54.014+02:00 DEBUG 15204 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-27T18:17:54.024+02:00 DEBUG 15204 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-27T18:17:54.031+02:00 DEBUG 15204 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-27T18:17:55.443+02:00  WARN 15204 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T18:17:59.131+02:00 DEBUG 15204 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.model,
+        c1_0.owner_id,
+        c1_0.plate 
+    from
+        car c1_0
+2023-07-27T18:17:59.164+02:00 DEBUG 15204 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0 
+    where
+        p1_0.id=?
+2023-07-27T18:17:59.330+02:00 DEBUG 15204 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:17:59.341+02:00 DEBUG 15204 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:17:59.356+02:00 DEBUG 15204 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0
+2023-07-27T18:17:59.365+02:00 DEBUG 15204 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Person */delete 
+    from
+        person 
+    where
+        id=?
+2023-07-27T18:17:59.393+02:00 DEBUG 15204 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        person_seq for update
+2023-07-27T18:17:59.395+02:00 DEBUG 15204 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        person_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:17:59.413+02:00 DEBUG 15204 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Person */insert 
+    into
+        person (first_name,last_name,id) 
+    values
+        (?,?,?)
+2023-07-27T18:17:59.430+02:00 DEBUG 15204 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        car_seq for update
+2023-07-27T18:17:59.432+02:00 DEBUG 15204 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        car_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:17:59.443+02:00 DEBUG 15204 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:17:59.452+02:00 DEBUG 15204 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:17:59.478+02:00 DEBUG 15204 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:17:59.495+02:00 DEBUG 15204 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:19:53.619+02:00 DEBUG 14940 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-27T18:19:53.631+02:00 DEBUG 14940 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-27T18:19:53.639+02:00 DEBUG 14940 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-27T18:19:54.902+02:00  WARN 14940 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T18:20:05.363+02:00 DEBUG 14940 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        c1_0.id,
+        c1_0.model,
+        c1_0.owner_id,
+        c1_0.plate 
+    from
+        car c1_0
+2023-07-27T18:20:05.381+02:00 DEBUG 14940 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0 
+    where
+        p1_0.id=?
+2023-07-27T18:20:05.442+02:00 DEBUG 14940 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:20:05.451+02:00 DEBUG 14940 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Car */delete 
+    from
+        car 
+    where
+        id=?
+2023-07-27T18:20:05.466+02:00 DEBUG 14940 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* <criteria> */ select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0
+2023-07-27T18:20:05.474+02:00 DEBUG 14940 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete for al.polis.calculator.model.Person */delete 
+    from
+        person 
+    where
+        id=?
+2023-07-27T18:20:05.496+02:00 DEBUG 14940 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        person_seq for update
+2023-07-27T18:20:05.501+02:00 DEBUG 14940 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        person_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:20:05.515+02:00 DEBUG 14940 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Person */insert 
+    into
+        person (first_name,last_name,id) 
+    values
+        (?,?,?)
+2023-07-27T18:20:05.528+02:00 DEBUG 14940 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        car_seq for update
+2023-07-27T18:20:05.531+02:00 DEBUG 14940 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        car_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:20:05.537+02:00 DEBUG 14940 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:20:05.550+02:00 DEBUG 14940 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:20:05.572+02:00 DEBUG 14940 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:20:05.586+02:00 DEBUG 14940 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
