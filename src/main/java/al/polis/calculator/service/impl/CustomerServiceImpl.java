@@ -44,9 +44,9 @@ class CustomerServiceImpl implements CustomerService {
     @Override
     public void testRelationships() {
         // delete all cars
-        carRepository.deleteAll();
+//        carRepository.deleteAll();
         // delete all persons
-        personRepository.deleteAll();
+//        personRepository.deleteAll();
 
         // create one person
         Person p1 = new Person();
@@ -79,8 +79,8 @@ class CustomerServiceImpl implements CustomerService {
         p1 = personRepository.save(p1);
 
         // retrieve and print cars owned by p1
-//        p1 = personRepository.findById(p1.getId())
-//                .orElse(null);
+        p1 = personRepository.findById(402L)
+                .orElse(null);
         List<Car> cars = p1.getOwnedCars();
         for (Car car : cars) {
             System.out.println("Car plate is " + car.getPlate());

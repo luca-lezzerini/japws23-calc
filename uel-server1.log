@@ -1482,3 +1482,168 @@ java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" becau
         plate=? 
     where
         id=?
+2023-07-27T18:24:56.481+02:00 DEBUG 17288 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-27T18:24:56.491+02:00 DEBUG 17288 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-27T18:24:56.498+02:00 DEBUG 17288 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-27T18:24:57.727+02:00  WARN 17288 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T18:25:05.476+02:00 DEBUG 17288 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        person_seq for update
+2023-07-27T18:25:05.480+02:00 DEBUG 17288 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        person_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:25:05.544+02:00 DEBUG 17288 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Person */insert 
+    into
+        person (first_name,last_name,id) 
+    values
+        (?,?,?)
+2023-07-27T18:25:05.568+02:00 DEBUG 17288 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        car_seq for update
+2023-07-27T18:25:05.570+02:00 DEBUG 17288 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        car_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:25:05.574+02:00 DEBUG 17288 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:25:05.581+02:00 DEBUG 17288 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:25:05.602+02:00 DEBUG 17288 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:25:05.610+02:00 DEBUG 17288 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:27:05.430+02:00 DEBUG 13876 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column first_number  float(53)
+2023-07-27T18:27:05.445+02:00 DEBUG 13876 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column result  float(53)
+2023-07-27T18:27:05.454+02:00 DEBUG 13876 --- [main] org.hibernate.SQL                        : 
+    alter table calculator_row 
+       modify column second_number  float(53)
+2023-07-27T18:27:07.069+02:00  WARN 13876 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T18:27:09.137+02:00 DEBUG 13876 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        person_seq for update
+2023-07-27T18:27:09.139+02:00 DEBUG 13876 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        person_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:27:09.221+02:00 DEBUG 13876 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Person */insert 
+    into
+        person (first_name,last_name,id) 
+    values
+        (?,?,?)
+2023-07-27T18:27:09.269+02:00 DEBUG 13876 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        car_seq for update
+2023-07-27T18:27:09.272+02:00 DEBUG 13876 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        car_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-07-27T18:27:09.281+02:00 DEBUG 13876 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:27:09.289+02:00 DEBUG 13876 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert for
+        al.polis.calculator.model.Car */insert 
+    into
+        car (model,owner_id,plate,id) 
+    values
+        (?,?,?,?)
+2023-07-27T18:27:09.319+02:00 DEBUG 13876 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:27:09.337+02:00 DEBUG 13876 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* update
+        for al.polis.calculator.model.Car */update car 
+    set
+        model=?,
+        owner_id=?,
+        plate=? 
+    where
+        id=?
+2023-07-27T18:27:09.449+02:00 DEBUG 13876 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.first_name,
+        p1_0.last_name 
+    from
+        person p1_0 
+    where
+        p1_0.id=?
+2023-07-27T18:27:09.485+02:00 DEBUG 13876 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        o1_0.owner_id,
+        o1_0.id,
+        o1_0.model,
+        o1_0.plate 
+    from
+        car o1_0 
+    where
+        o1_0.owner_id=?
